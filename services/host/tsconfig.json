@@ -1,7 +1,24 @@
 {
-    "name": "@packages/build-config",
-    "version": "1.0.0",
-    "main": "./src/index.ts",
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "ESNext",
+        "target": "es5",
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
     "devDependencies": {
         "@babel/core": "7.23.2",
         "@babel/preset-react": "7.22.15",
